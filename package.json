@@ -24,6 +24,9 @@
     "eslint-plugin-react": "^7.14.3",
     "gatsby-plugin-eslint": "^2.0.5",
     "prettier": "^1.18.2",
+    "prettier-eslint": "^9.0.0",
+    "prettier-eslint-cli": "^5.0.0",
+    "prettier-stylelint": "^0.4.2",
     "stylelint": "^10.1.0",
     "stylelint-config-recommended": "^2.2.0",
     "stylelint-config-recommended-scss": "^3.3.0",
@@ -39,10 +42,11 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "fix:code": "prettier-eslint --write 'src/**/*.{js,jsx}'",
+    "fix:styles": "prettier-stylelint",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests!\"",
-    "lint:fix": "eslint --fix 'src/**/*.{js,jsx}'"
+    "test": "echo \"Write tests!\""
   },
   "repository": {
     "url": "https://github.com/bike-bar/web"
