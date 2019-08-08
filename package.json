@@ -1,0 +1,50 @@
+{
+  "name": "The_Bicycle_Bar",
+  "private": true,
+  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "version": "0.1.0",
+  "author": "John Huggett <johnathan.huggett@gmail.com> Shaun Kelly <shaun37k@gmail.com>",
+  "dependencies": {
+    "gatsby": "^2.13.53",
+    "gatsby-plugin-react-helmet": "^3.1.3",
+    "gatsby-plugin-sass": "^2.1.4",
+    "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-loader": "^2.2.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "gatsby-plugin-eslint": "^2.0.5",
+    "prettier": "^1.18.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-config-recommended-scss": "^3.3.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-scss": "^3.9.3"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests!\"",
+    "lint:fix": "eslint --fix 'src/**/*.{js,jsx}'"
+  },
+  "repository": {
+    "url": "https://github.com/bike-bar/web"
+  }
+}
