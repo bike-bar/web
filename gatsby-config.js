@@ -4,5 +4,5 @@ module.exports = {
     description: ``,
     author: `Bicycle Bar of Chattanooga`
   },
-  plugins: [`gatsby-plugin-react-helmet`, 'gatsby-plugin-eslint', 'gatsby-plugin-sass']
+  plugins: ['gatsby-plugin-react-helmet', 'gatsby-plugin-eslint', 'gatsby-plugin-sass']
 }
