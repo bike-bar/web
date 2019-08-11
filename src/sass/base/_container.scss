@@ -1,0 +1,35 @@
+/* ---------------------------------------------------------------------
+ Structure - Main Containers
+------------------------------------------------------------------------ */
+.container {
+  width: 100%;
+  position: relative;
+}
+
+/* Inner Container Varieties */
+.container__inner {
+  max-width: $container-max; // max-width: 1200px
+  margin: 0 auto;
+  padding: 0.5em $padding-mobile;
+  display: block;
+  position: relative;
+}
+
+/* ---------------------------------------------------------------------
+ Breakpoint: Medium (51.26em)
+------------------------------------------------------------------------ */
+@include media('>medium') {
+  .container__inner {
+    padding: 1em $padding-tablet;
+  }
+}
+
+/* ---------------------------------------------------------------------
+ Breakpoint: Large (70em)
+------------------------------------------------------------------------ */
+@include media('>large') {
+  .container__inner {
+    padding: 1em $padding-desktop;
+    background-color: transparent;
+  }
+}
