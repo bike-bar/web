@@ -1,0 +1,30 @@
+/* =====================================================================
+ Base Setup
+======================================================================== */
+
+/* ---------------------------------------------------------------------
+ Generic Defs
+------------------------------------------------------------------------ */
+html {
+  /* Set to 62.5% for easy rem resizing
+       See: http://snook.ca/archives/html_and_css/font-size-with-rem
+    */
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body * {
+  text-align: left; /* quirks fix */
+  // font-family: $opensans; TODO: CREATE BASE FONT FAMILY
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+*:focus {
+  outline: none;
+}
