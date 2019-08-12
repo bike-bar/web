@@ -8,22 +8,22 @@ import PropTypes from 'prop-types'
     [
 */
 
-const Picture = ({ classNameArr, imageArr, minWidth }) => (
-  <div className={classNameArr[0]}>
-    <picture className={classNameArr[1]}>
+const Picture = ({ className, imageArr, minWidth }) => (
+  <div className={className}>
+    <picture>
       <source srcSet={`${imageArr[1][0]} 1x, ${imageArr[1][1]} 2x`} media={minWidth} />
 
       <source srcSet={`${imageArr[0][0]} 1x, ${imageArr[0][1]} 2x`} />
 
       {/* IE does not support picture tag, this is the fall back */}
-      <img className={classNameArr[1]} src={`${imageArr[1][0]}`} alt={imageArr[2]} />
+      <img src={`${imageArr[1][0]}`} alt={imageArr[2]} />
     </picture>
   </div>
 )
 
 Picture.propTypes = {
-  classNameArr: PropTypes.array.isRequired,
-  imageArr: PropTypes.array.isRequired,
+  classNameArr: PropTypes.string.isRequired,
+  imageArr: PropTypes.arrayOf(PropTypes.stings).isRequired,
   minWidth: PropTypes.string.isRequired // ex: "(min-width: 70.02em)"
 }
 
