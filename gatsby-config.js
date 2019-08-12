@@ -1,6 +1,8 @@
+const titleData = require('./src/meta-data/titles.json')
+
 module.exports = {
   siteMetadata: {
-    title: `Bicycle Bar`,
+    titles: titleData,
     description: ``,
     author: `Bicycle Bar of Chattanooga`
   },
