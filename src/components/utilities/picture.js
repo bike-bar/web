@@ -13,6 +13,7 @@ const Picture = ({ classNameArr, imageArr, minWidth }) => (
 
       <source srcSet={`${imageArr[0][0]} 1x, ${imageArr[0][1]} 2x`} />
 
+      {/* IE does not support picture tag, this is the fall back */}
       <img className={classNameArr[1]} src={`${imageArr[1][0]}`} alt={imageArr[2]} />
     </picture>
   </div>
