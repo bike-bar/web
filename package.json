@@ -51,11 +51,6 @@
     "test": "echo \"Write tests!\"",
     "precommit": "lint-staged"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "src/**/*.{js,jsx}": [
       "yarn run fix:code",
