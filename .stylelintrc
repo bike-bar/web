@@ -3,14 +3,4 @@
     "stylelint-config-standard",
     "stylelint-config-recommended-scss"
   ],
-  "rules": {
-    "block-no-empty": null,
-    "comment-empty-line-before": null,
-    "declaration-empty-line-before": null,
-    "rule-empty-line-before": null,
-    "selector-combinator-space-after": null,
-    "no-descending-specificity": null,
-    "no-duplicate-selectors": null,
-    "font-family-no-missing-generic-family-keyword": null
-  }
 }
