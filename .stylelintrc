@@ -3,4 +3,7 @@
     "stylelint-config-standard",
     "stylelint-config-recommended-scss"
   ],
+  "rules": {
+    "string-quotes": "single"
+  }
 }

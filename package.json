@@ -44,6 +44,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "fix:code": "eslint --fix",
     "fix:styles": "prettier-stylelint --write 'src/**/*.{css,scss}'",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -53,17 +54,17 @@
   },
   "husky": {
     "hooks": {
-      "precommit": "lint-staged",
+      "pre-commit": "lint-staged",
       "pre-push": "yarn check-eslint-config && yarn check-code"
     }
   },
   "lint-staged": {
     "src/**/*.{js,jsx}": [
-      "eslint --fix",
+      "yarn run --silent fix:code",
       "git add"
     ],
     "src/**/*.scss": [
-      "yarn run fix:styles",
+      "yarn run --silent fix:styles",
       "git add"
     ]
   },
