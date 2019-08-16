@@ -8,8 +8,8 @@ import PropTypes from 'prop-types'
     [
 */
 
-const Picture = ({ className, imageArr, minWidth }) => (
-  <div className={className}>
+const Picture = ({ classNameArr, imageArr, minWidth }) => (
+  <div className={classNameArr}>
     <picture>
       <source srcSet={`${imageArr[1][0]} 1x, ${imageArr[1][1]} 2x`} media={minWidth} />
 
@@ -22,7 +22,7 @@ const Picture = ({ className, imageArr, minWidth }) => (
 )
 
 Picture.propTypes = {
-  className: PropTypes.string.isRequired,
+  classNameArr: PropTypes.string.isRequired,
   imageArr: PropTypes.arrayOf(PropTypes.stings).isRequired,
   minWidth: PropTypes.string.isRequired // ex: "(min-width: 70.02em)"
 }
