@@ -19,5 +19,8 @@ Image.propTypes = {
   className: PropTypes.string,
   imageArr: PropTypes.arrayOf(PropTypes.stings).isRequired
 }
+Image.defaultProps = {
+  className: ''
+}
 
 export default Image

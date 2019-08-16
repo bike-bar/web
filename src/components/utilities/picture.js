@@ -22,9 +22,9 @@ const Picture = ({ className, imageArr, minWidth }) => (
 )
 
 Picture.propTypes = {
-  classNameArr: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
   imageArr: PropTypes.arrayOf(PropTypes.stings).isRequired,
   minWidth: PropTypes.string.isRequired // ex: "(min-width: 70.02em)"
 }
 
-export default CardPicture
+export default Picture
