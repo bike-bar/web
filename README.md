@@ -25,3 +25,11 @@ $ yarn develop
 ```sh
 $ yarn build
 ```
+
+## Linting Config 
+
+### Troubleshooting
+
+```In development, ESLint should be running by default, as declared in the .vscode workspace settings. However, should it not be running, select shift+command+P to view the Command Palette, then search for ESLint: Enable ESLint. Click the command.
+
+Future Prettier rules are to be added to .eslintrc. There is still a .prettierrc file, only because without it, stylelint throws an error.```
