@@ -17,17 +17,17 @@
   "devDependencies": {
     "babel-eslint": "^10.0.2",
     "eslint": "^6.1.0",
-    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.0.0",
     "eslint-loader": "^2.2.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
     "gatsby-plugin-eslint": "^2.0.5",
     "husky": "^3.0.3",
     "lint-staged": "^9.2.1",
     "prettier": "^1.18.2",
-    "prettier-eslint": "^9.0.0",
-    "prettier-eslint-cli": "^5.0.0",
     "prettier-stylelint": "^0.4.2",
     "stylefmt": "^6.0.3",
     "stylelint": "^10.1.0",
@@ -44,20 +44,27 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "fix:code": "prettier-eslint --write 'src/**/*.{js,jsx}'",
+    "fix:code": "eslint --fix 'src/**/*.{js,jsx}'",
     "fix:styles": "prettier-stylelint --write 'src/**/*.{css,scss}'",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests!\"",
-    "precommit": "lint-staged"
+    "check-eslint-config": "eslint --print-config 'src/**/*.{js,jsx}' | eslint-config-prettier-check",
+    "check-code": "eslint src"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn check-eslint-config && yarn check-code"
+    }
   },
   "lint-staged": {
     "src/**/*.{js,jsx}": [
-      "yarn run fix:code",
+      "yarn run --silent fix:code",
       "git add"
     ],
     "src/**/*.scss": [
-      "yarn run fix:styles",
+      "yarn run --silent fix:styles",
       "git add"
     ]
   },

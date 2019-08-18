@@ -15,9 +15,10 @@ const Image = ({ className, imageArr }) => (
   />
 )
 
+/* eslint-disable react/require-default-props */
 Image.propTypes = {
   className: PropTypes.string,
-  imageArr: PropTypes.arrayOf(PropTypes.stings).isRequired
+  imageArr: PropTypes.arrayOf(PropTypes.string).isRequired
 }
 
 export default Image
