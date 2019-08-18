@@ -43,7 +43,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "yarn run fix:code && gatsby develop",
+    "develop": "gatsby develop",
     "fix:code": "eslint --fix 'src/**/*.{js,jsx}'",
     "fix:styles": "prettier-stylelint --write 'src/**/*.{css,scss}'",
     "start": "npm run develop",
