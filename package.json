@@ -28,12 +28,10 @@
     "husky": "^3.0.3",
     "lint-staged": "^9.2.1",
     "prettier": "^1.18.2",
-    "stylefmt": "^6.0.3",
     "stylelint": "^10.1.0",
     "stylelint-config-prettier": "^5.2.0",
     "stylelint-config-recommended-scss": "^3.3.0",
     "stylelint-config-standard": "^18.3.0",
-    "stylelint-config-styled-components": "^0.1.1",
     "stylelint-prettier": "^1.1.1",
     "stylelint-scss": "^3.9.3"
   },
@@ -46,7 +44,7 @@
     "develop": "gatsby develop",
     "fix:code": "eslint --fix 'src/**/*.{js,jsx}'",
     "fix:styles": "stylelint --fix 'src/**/*.{css,scss}'",
-    "start": "npm run develop",
+    "start": "yarn run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests!\"",
     "check-eslint-config": "eslint --print-config 'src/**/*.{js,jsx}' | eslint-config-prettier-check",
@@ -60,12 +58,10 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx}": [
-      "yarn run --silent fix:code",
-      "git add"
+      "yarn run --silent fix:code"
     ],
     "src/**/*.scss": [
-      "yarn run --silent fix:styles",
-      "git add"
+      "yarn run --silent fix:styles"
     ]
   },
   "repository": {
