@@ -28,7 +28,7 @@
  Breakpoint: Large (70em)
 ------------------------------------------------------------------------ */
 
-@include media('>large') {
+@include media(">large") {
   .header-wrap {
     position: relative;
     background: transparent;

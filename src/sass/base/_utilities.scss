@@ -4,3 +4,15 @@
   top: 0;
   z-index: 222;
 }
+
+/* hidden */
+.hide-display {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  left: -999px;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  white-space: nowrap;
+}

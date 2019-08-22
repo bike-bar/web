@@ -3,6 +3,8 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
 import { Image } from '../../utilities'
+import HeaderNav from './headerNav'
+
 import logo1x from '../../../assets/header-logo.png'
 import logo2x from '../../../assets/header-logo@2x.png'
 
@@ -10,7 +12,8 @@ class Header extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      hasScrolled: false
+      hasScrolled: false,
+      changeHeaderStyle: false
     }
   }
 
@@ -31,11 +34,18 @@ class Header extends Component {
     }
   }
 
+  handleHeaderChange = () => {
+    this.setState(prevState => ({ changeHeaderStyle: !prevState.changeHeaderStyle }))
+  }
+
   render() {
-    const { hasScrolled } = this.state
+    const { hasScrolled, changeHeaderStyle } = this.state
 
     return (
-      <header className={this.state.hasScrolled ? 'header-wrap sticky ' : 'header-wrap'}>
+      <header
+        className={this.state.hasScrolled ? 'header-wrap sticky ' : 'header-wrap'}
+        style={changeHeaderStyle ? { position: 'sticky', backgroundColor: '#beafd8' } : null}
+      >
         <div className="container__inner">
           <div className={hasScrolled ? 'header header--no-border' : 'header'}>
             <div className="header__logo">
@@ -45,6 +55,8 @@ class Header extends Component {
             </div>
           </div>
         </div>
+
+        <HeaderNav handleHeaderChange={this.handleHeaderChange} />
       </header>
     )
   }
