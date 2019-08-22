@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recommended-scss",
+    "stylelint-prettier/recommended"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      true,
+      {
+        "endOfLine": "lf",
+        "tabWidth": 2,
+        "arrowParens": "avoid",
+        "printWidth": 100,
+        "semi": false,
+        "singleQuote": true,
+        "trailingComma": "none"
+      }
+    ],
+    "block-no-empty": null
+  }
+}
