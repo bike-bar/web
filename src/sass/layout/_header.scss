@@ -131,7 +131,7 @@
   &__checkbox:checked ~ &__menu {
     height: 14.9em;
     z-index: 333;
-    border-bottom: 1px solid $color-primary;
+    border-bottom: 2px solid $color-primary;
   }
 }
 

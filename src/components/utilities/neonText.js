@@ -9,9 +9,10 @@ const NeonText = ({ text, animation }) => (
   </>
 )
 
+/* eslint-disable react/require-default-props */
 NeonText.propTypes = {
   text: PropTypes.string.isRequired,
-  animation: PropTypes.string.isRequired
+  animation: PropTypes.string
 }
 
 export default NeonText
