@@ -41,7 +41,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "fix:code": "eslint --fix 'src/**/*.{js,jsx}'",
     "fix:styles": "stylelint --fix 'src/**/*.{css,scss}'",
     "start": "yarn run develop",

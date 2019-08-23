@@ -1,0 +1,42 @@
+.footer {
+  margin-top: 3em;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+
+  // map, hours, contact
+  &__top {
+    // flex-direction: column;
+  }
+
+  &__map {
+    padding: 6rem 8rem;
+    border: 2px solid black;
+  }
+  &__hours {
+    padding: 6rem 8rem;
+    border: 2px solid black;
+  }
+  &__contact {
+    padding: 6rem 8rem;
+    border: 2px solid black;
+  }
+
+  // social, copyright
+  &__bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__social {
+    padding: 4rem 6rem;
+    border: 2px solid black;
+  }
+  &__copyright {
+    padding: 4rem 6rem;
+    border: 2px solid black;
+  }
+}
