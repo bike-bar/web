@@ -14,7 +14,7 @@
   z-index: 333;
 
   &__logo {
-    width: 5em;
+    width: 3em;
   }
 }
 
@@ -37,7 +37,6 @@
     position: relative;
     z-index: 333;
     cursor: pointer;
-    border-color: $color-primary;
 
     &-link {
       padding: 0;
@@ -99,14 +98,15 @@
     width: 100%;
     height: 0;
     position: absolute;
-    top: 7.3em;
+    top: 5.468em;
     left: 0;
     overflow: hidden;
-    background-color: $color-white;
+    background-color: lighten(#414141, 10%);
     transition: height 0.5s ease;
   }
 
   &__list {
+    height: 100%;
     list-style: none;
   }
 
@@ -116,11 +116,8 @@
     display: block;
     position: relative;
     text-decoration: none;
-    text-align: center;
-    color: $color-black;
     cursor: pointer;
     font-family: $stencil;
-    text-transform: uppercase;
     background-color: transparent;
     border: none;
 
@@ -132,8 +129,9 @@
 
   // TRANSITIONS THE MAIN NAV MENU
   &__checkbox:checked ~ &__menu {
-    height: 10.5em;
+    height: 14.9em;
     z-index: 333;
+    border-bottom: 1px solid $color-primary;
   }
 }
 

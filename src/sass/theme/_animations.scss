@@ -7,3 +7,43 @@
     transform: translateY(0);
   }
 }
+
+@keyframes glow {
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes blink {
+  70% {
+    opacity: 1;
+  }
+
+  79% {
+    opacity: 0;
+  }
+
+  81% {
+    opacity: 1;
+  }
+
+  82% {
+    opacity: 0;
+  }
+
+  83% {
+    opacity: 1;
+  }
+
+  92% {
+    opacity: 0;
+  }
+
+  92.5% {
+    opacity: 1;
+  }
+}

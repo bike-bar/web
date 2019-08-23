@@ -2,28 +2,30 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Hamburger from './hamburger'
+import { NeonText } from '../../utilities'
 
 const HeaderNav = ({ handleHeaderChange }) => (
   <div className="navigation">
     <Hamburger handleHeaderChange={handleHeaderChange} />
+
     <nav className="navigation__menu">
       <ul className="navigation__list">
         <li className="navigation__item">
           {/* eslint-disable-next-line */}
           <a className="navigation__link" href="" tabIndex="0">
-            Events
+            <NeonText text="events" animation="blink" />
           </a>
         </li>
         <li className="navigation__item">
           {/* eslint-disable-next-line */}
           <a className="navigation__link" href="" tabIndex="0">
-            co-op
+            <NeonText text="co-op" animation="glow" />
           </a>
         </li>
         <li className="navigation__item">
           {/* eslint-disable-next-line */}
           <a className="navigation__link" href="" tabIndex="0">
-            about us
+            <NeonText text="about us" />
           </a>
         </li>
       </ul>
