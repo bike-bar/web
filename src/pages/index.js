@@ -10,9 +10,11 @@ const IndexPage = () => {
 
   return (
     <Layout dropInHeader={dropInHeader}>
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
+      <main ref={dropInHeader} style={{ height: '50em', background: '#d3d7d9' }}>
+        <h1>Hi people</h1>
+        <p>Welcome to your new Gatsby site.</p>
+        <p>Now go build something great.</p>
+      </main>
     </Layout>
   )
 }

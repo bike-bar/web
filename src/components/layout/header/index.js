@@ -53,10 +53,10 @@ class Header extends Component {
                 <Image imageArr={[logo1x, logo2x, 'Bike Bar logo']} />
               </Link>
             </div>
+
+            <HeaderNav handleHeaderChange={this.handleHeaderChange} />
           </div>
         </div>
-
-        <HeaderNav handleHeaderChange={this.handleHeaderChange} />
       </header>
     )
   }

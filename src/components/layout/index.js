@@ -8,9 +8,7 @@ const Layout = ({ children, metaData, dropInHeader }) => (
   <>
     <Header dropInHeader={dropInHeader} />
     <SEO metaData={metaData} />
-    <main ref={dropInHeader} style={{ height: '50em', background: '#d3d7d9' }}>
-      {children}
-    </main>
+    {children}
   </>
 )
 
