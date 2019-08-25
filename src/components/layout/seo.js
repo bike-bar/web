@@ -26,13 +26,9 @@ const SEO = ({ metaData }) => (
               name: 'description'
               // content: data.site.siteMetadata.descriptions[metaData]
             }
-
-
           ]}
         >
           <html lang="en" />
-
-
         </Helmet>
       )
     }}
