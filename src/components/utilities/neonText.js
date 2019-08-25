@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
@@ -8,7 +6,7 @@ class NeonText extends Component {
     super(props)
 
     this.state = {
-      show: false,
+      show: false
     }
   }
 
@@ -16,25 +14,22 @@ class NeonText extends Component {
     this.addClass()
   }
 
-  addClass = () => {
-    const delay =
-      this.setState({ show: true }, () => {
-        this._timeout = setTimeout(() => {
-          console.log('add', this.state.show)
-          this.removeClass(this.props.delay)
-        }, 1500)
-      })
-  }
-
   componentWillUnmount() {
     /* eslint-disable no-unused-expressions */
     this._timeout && clearTimeout(this._timeout)
   }
 
-  removeClass = (delay) => {
+  addClass = () => {
+    this.setState({ show: true }, () => {
+      this._timeout = setTimeout(() => {
+        this.removeClass(this.props.delay)
+      }, 1500)
+    })
+  }
+
+  removeClass = delay => {
     this.setState({ show: false }, () => {
       this._timeout = setTimeout(() => {
-        console.log('remove', this.state.show)
         this.addClass()
       }, delay)
     })
@@ -57,7 +52,8 @@ class NeonText extends Component {
 /* eslint-disable react/require-default-props */
 NeonText.propTypes = {
   text: PropTypes.string.isRequired,
-  index: PropTypes.oneOfType([PropTypes.number, PropTypes.bool])
+  index: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
+  delay: PropTypes.number.isRequired
 }
 
 export default NeonText
