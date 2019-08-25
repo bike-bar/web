@@ -101,7 +101,7 @@
     top: 5.468em;
     left: 0;
     overflow: hidden;
-    background-color: lighten(#414141, 10%);
+    background-color: $color-secondary-background;
     transition: height 0.5s ease;
   }
 
@@ -129,7 +129,7 @@
 
   // TRANSITIONS THE MAIN NAV MENU
   &__checkbox:checked ~ &__menu {
-    height: 14.9em;
+    height: 12em;
     z-index: 333;
     border-bottom: 2px solid $color-primary;
   }
@@ -159,10 +159,39 @@
 
   .header {
     padding: 1em 0 0;
-    border-bottom: 1px solid $color-white;
+    border-bottom: 2px solid $color-primary;
 
     &--no-border {
       border: none;
+    }
+  }
+
+  .navigation {
+    &__button {
+      display: none;
+    }
+
+    &__menu {
+      height: auto;
+      position: static;
+      top: 4.95em;
+      left: 0;
+      background-color: transparent;
+      overflow: visible;
+      visibility: visible;
+      align-items: baseline;
+    }
+
+    &__list {
+      display: flex;
+    }
+
+    &__link {
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-right: 1em;
+      }
     }
   }
 }

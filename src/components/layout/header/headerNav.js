@@ -10,7 +10,7 @@ const HeaderNav = ({ handleHeaderChange }) => (
 
     <nav className="navigation__menu">
       <ul className="navigation__list">
-        <NavItem list={['events', 'co-open', 'about us']} />
+        <NavItem list={['events', 'co-op', 'about us']} />
       </ul>
     </nav>
   </div>

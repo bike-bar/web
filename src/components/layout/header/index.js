@@ -49,6 +49,7 @@ class Header extends Component {
         <div className="container__inner">
           <div className={hasScrolled ? 'header header--no-border' : 'header'}>
             <div className="header__logo">
+              {/* TODO: Update html to <picture></picture> once we get the logo */}
               <Link to="/">
                 <Image imageArr={[logo1x, logo2x, 'Bike Bar logo']} />
               </Link>

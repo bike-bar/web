@@ -1,23 +1,38 @@
 .neon {
-  color: #fff;
+  color: $color-white;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
-  text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff, 0 0 70px #228dff, 0 0 80px #228dff,
-    0 0 100px #228dff, 0 0 150px #228dff;
-  animation: colorRotate 10s linear infinite;
+  text-shadow: 0 0 10px $color-white, 0 0 20px #f5d483, 0 0 40px #f5d483, 0 0 80px $color-white,
+    0 0 160px $color-white;
 
-  &--blink {
-    animation: blink linear infinite 2s;
+  &--0 {
+    animation: buzz 0.03s infinite alternate-reverse 0.25s;
   }
 
-  &--glow {
-    animation: glow linear infinite 2s;
+  &--1 {
+    animation: buzz 0.03s infinite alternate-reverse 1.25s;
+  }
+
+  &--2 {
+    animation: buzz 0.03s infinite alternate-reverse 0.5s;
   }
 
   & span {
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: $stencil;
     letter-spacing: 2px;
+  }
+}
+
+/* ---------------------------------------------------------------------
+ Breakpoint: Large (51.25em)
+------------------------------------------------------------------------ */
+
+@include media(">medium") {
+  .neon {
+    & span {
+      letter-spacing: 3px;
+    }
   }
 }
