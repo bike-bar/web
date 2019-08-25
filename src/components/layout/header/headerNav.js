@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Hamburger from './hamburger'
-import { NeonText } from '../../utilities'
+import NavItem from './navItem'
 
 const HeaderNav = ({ handleHeaderChange }) => (
   <div className="navigation">
@@ -10,24 +10,7 @@ const HeaderNav = ({ handleHeaderChange }) => (
 
     <nav className="navigation__menu">
       <ul className="navigation__list">
-        <li className="navigation__item">
-          {/* eslint-disable-next-line */}
-          <a className="navigation__link" href="" tabIndex="0">
-            <NeonText text="events" animation="blink" />
-          </a>
-        </li>
-        <li className="navigation__item">
-          {/* eslint-disable-next-line */}
-          <a className="navigation__link" href="" tabIndex="0">
-            <NeonText text="co-op" animation="glow" />
-          </a>
-        </li>
-        <li className="navigation__item">
-          {/* eslint-disable-next-line */}
-          <a className="navigation__link" href="" tabIndex="0">
-            <NeonText text="about us" />
-          </a>
-        </li>
+        <NavItem list={['events', 'co-open', 'about us']} />
       </ul>
     </nav>
   </div>
@@ -38,3 +21,4 @@ HeaderNav.propTypes = {
 }
 
 export default HeaderNav
+/* eslint-disable-next-line */
