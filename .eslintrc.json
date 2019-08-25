@@ -59,6 +59,21 @@
         "forbid": []
       }
     ],
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "labelComponents": [
+          "CustomInputLabel"
+        ],
+        "labelAttributes": [
+          "label"
+        ],
+        "controlComponents": [
+          "CustomInput"
+        ],
+        "depth": 3
+      }
+    ],
     "react/jsx-one-expression-per-line": 0,
     "react/destructuring-assignment": 0,
     "react/jsx-props-no-spreading": 0,

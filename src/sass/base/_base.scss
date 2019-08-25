@@ -21,7 +21,7 @@ html {
 
 body * {
   text-align: left; /* quirks fix */
-  // font-family: $opensans; TODO: CREATE BASE FONT FAMILY
+  font-family: $opensans;
   font-size: 1.6rem;
   line-height: 1.6;
   font-weight: 400;

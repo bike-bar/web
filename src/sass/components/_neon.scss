@@ -1,0 +1,38 @@
+.neon {
+  color: $color-white;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 0 10px $color-white, 0 0 20px #f5d483, 0 0 40px #f5d483, 0 0 80px $color-white,
+    0 0 160px $color-white;
+
+  &--0 {
+    animation: buzz 0.03s infinite alternate-reverse 0.25s;
+  }
+
+  &--1 {
+    animation: buzz 0.03s infinite alternate-reverse 1.25s;
+  }
+
+  &--2 {
+    animation: buzz 0.03s infinite alternate-reverse 0.5s;
+  }
+
+  & span {
+    font-size: 2rem;
+    font-family: $stencil;
+    letter-spacing: 2px;
+  }
+}
+
+/* ---------------------------------------------------------------------
+ Breakpoint: Large (51.25em)
+------------------------------------------------------------------------ */
+
+@include media('>medium') {
+  .neon {
+    & span {
+      letter-spacing: 3px;
+    }
+  }
+}

@@ -3,9 +3,11 @@ import PropTypes from 'prop-types'
 
 import SEO from './seo'
 import Footer from './footer/index'
+import Header from './header'
 
-const Layout = ({ children, metaData }) => (
+const Layout = ({ children, metaData, dropInHeader }) => (
   <>
+    <Header dropInHeader={dropInHeader} />
     <SEO metaData={metaData} />
     <main>{children}</main>
     <Footer />
@@ -14,7 +16,8 @@ const Layout = ({ children, metaData }) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  metaData: PropTypes.string
+  metaData: PropTypes.string,
+  dropInHeader: PropTypes.object.isRequired
 }
 
 Layout.defaultProps = {

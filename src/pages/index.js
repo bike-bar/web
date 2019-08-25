@@ -4,12 +4,21 @@ import Layout from '../components/layout'
 
 import '../sass/main.scss'
 
-const IndexPage = () => (
-  <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-  </Layout>
-)
+const IndexPage = () => {
+  // setting a reference to the main content for drop in header
+  const dropInHeader = React.createRef()
+
+  return (
+    <Layout dropInHeader={dropInHeader}>
+      {/* FIXME: Just a placeholder hero */}
+      <div style={{ background: '#414141', height: '15em', marginTop: '-8em' }} />
+      <main ref={dropInHeader} style={{ height: '50em', background: '#414141' }}>
+        <h1>Hi people</h1>
+        <p>Welcome to your new Gatsby site.</p>
+        <p>Now go build something great.</p>
+      </main>
+    </Layout>
+  )
+}
 
 export default IndexPage

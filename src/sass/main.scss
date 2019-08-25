@@ -1,15 +1,20 @@
 /*** theme ***/
 @import 'theme/variables';
+@import 'theme/typography';
+@import 'theme/animations';
 
 /*** base ***/
 @import 'base/breakpoints';
 @import 'base/base';
 @import 'base/normalize';
 @import 'base/container';
+@import 'base/utilities';
 
 /*** components ***/
+@import 'components/neon';
 
 /*** layouts ***/
+@import 'layout/header';
 
 @import 'layout/footer';
 
