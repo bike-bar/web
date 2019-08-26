@@ -4,6 +4,8 @@ import Instagram from '../../icons/instagram'
 import Facebook from '../../icons/facebook'
 
 const Footer = () => {
+  const year = new Date().getFullYear()
+
   return (
     <footer className="footer">
       <div className="container__inner">
@@ -34,20 +36,12 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer__bottom">
-          <div className="footer__content">
-            <div className="footer__content-row">
-              <div className="footer__icons">
-                {/* TODO: apply spacing similar to justify-content: space-around */}
-                <Instagram />
-                <Facebook />
-              </div>
-            </div>
+          <div className="footer__icons">
+            {/* TODO: apply spacing similar to justify-content: space-around */}
+            <Instagram />
+            <Facebook />
           </div>
-          <div className="footer__content">
-            <div className="footer__content-row">
-              <p className="footer__copyright">© 2020 The Bicycle Bar</p>
-            </div>
-          </div>
+          <p className="footer__copyright">© {year} The Bicycle Bar</p>
         </div>
       </div>
     </footer>

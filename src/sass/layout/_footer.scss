@@ -1,6 +1,7 @@
 .footer {
   margin-top: 3em;
-  background: rgb(192, 176, 217);
+  background: linear-gradient(180deg, #4b4657 0%, #26272f 100%);
+  color: white;
 
   & .container_inner {
     display: flex;
@@ -8,13 +9,11 @@
     flex-direction: column;
   }
 
-  // map, hours, contact
-
-  // &__top {
-  // }
+  &__top {
+    border-bottom: 2px solid $color-white;
+  }
 
   &__content {
-    // border: 2px solid black;
     max-width: 23.4375em;
     margin: 0 auto 2em;
 
@@ -26,7 +25,7 @@
 
       & a {
         text-decoration: none;
-        color: black;
+        color: inherit;
       }
     }
   }
@@ -36,27 +35,53 @@
     display: flex;
     justify-content: center;
     font-weight: 700;
+    font-family: $stencil;
 
     & span {
       text-align: right;
     }
   }
 
-  // social, copyright
-  &__icons {
+  &__bottom {
+    margin-top: 1.5em;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    // &-instagram {
-    //   position: relative;
-    // }
-
-    // &-facebook {
-    //   position: relative;
-    // }
+    flex-direction: column;
   }
 
-  // &__copyright {
-  // }
+  // social, copyright
+  &__icons {
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &:first-of-type svg {
+      margin-right: 1em;
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+  }
+}
+
+/* ---------------------------------------------------------------------
+ Breakpoint: Large (70em)
+------------------------------------------------------------------------ */
+
+@include media('>small') {
+  .footer {
+    // social, copyright
+    &__bottom {
+      flex-direction: row;
+      align-items: center;
+    }
+    &__icons {
+      margin-right: auto;
+    }
+
+    &__copyright {
+      text-align: center;
+    }
+  }
 }
