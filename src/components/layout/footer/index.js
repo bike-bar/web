@@ -37,9 +37,20 @@ const Footer = () => {
         </div>
         <div className="footer__bottom">
           <div className="footer__icons">
-            {/* TODO: apply spacing similar to justify-content: space-around */}
-            <Instagram />
-            <Facebook />
+            <a
+              href="https://www.instagram.com/thebicyclebar/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Instagram />
+            </a>
+            <a
+              href="https://www.facebook.com/TheBicycleBar/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Facebook />
+            </a>
           </div>
           <p className="footer__copyright">© {year} The Bicycle Bar</p>
         </div>
