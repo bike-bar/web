@@ -4,6 +4,18 @@
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
   "author": "John Huggett <johnathan.huggett@gmail.com> Shaun Kelly <shaun37k@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby develop",
+    "fix:code": "eslint --fix 'src/**/*.{js,jsx}'",
+    "fix:styles": "stylelint --fix 'src/**/*.{css,scss}'",
+    "start": "yarn run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests!\"",
+    "check-eslint-config": "eslint --print-config 'src/**/*.{js,jsx}' | eslint-config-prettier-check",
+    "check-code": "eslint src"
+  },
   "dependencies": {
     "gatsby": "^2.13.53",
     "gatsby-plugin-react-helmet": "^3.1.3",
@@ -38,18 +50,6 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "fix:code": "eslint --fix 'src/**/*.{js,jsx}'",
-    "fix:styles": "stylelint --fix 'src/**/*.{css,scss}'",
-    "start": "yarn run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests!\"",
-    "check-eslint-config": "eslint --print-config 'src/**/*.{js,jsx}' | eslint-config-prettier-check",
-    "check-code": "eslint src"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
@@ -61,7 +61,7 @@
       "yarn run --silent fix:code",
       "git add"
     ],
-    "src/**/*.scss": [
+    "src/**/*.{css,scss}": [
       "yarn run --silent fix:styles",
       "git add"
     ]

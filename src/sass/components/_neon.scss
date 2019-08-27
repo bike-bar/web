@@ -29,7 +29,7 @@
  Breakpoint: Large (51.25em)
 ------------------------------------------------------------------------ */
 
-@include media(">medium") {
+@include media('>medium') {
   .neon {
     & span {
       letter-spacing: 3px;
