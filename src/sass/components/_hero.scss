@@ -1,0 +1,68 @@
+.hero {
+  width: 100%;
+  height: 35em;
+  margin-top: -5.404375em;
+  float: left;
+  background-image: url(../assets/home-hero-sm.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__heading-wrapper {
+    position: absolute;
+    top: calc(5.404375em + 50%);
+    right: 0;
+    // transform: translateY(-50%);
+  }
+}
+
+/* ---------------------------------------------------------------------
+ Breakpoint: Custom (25em)
+------------------------------------------------------------------------ */
+
+@media screen and (min-width: 25em) {
+  .hero {
+    height: 39em;
+  }
+}
+
+/* ---------------------------------------------------------------------
+ Breakpoint: Custom (31.25em)
+------------------------------------------------------------------------ */
+
+@media screen and (min-width: 31.25em) {
+  .hero {
+    height: 47em;
+  }
+}
+
+/* ---------------------------------------------------------------------
+ Breakpoint: Small (37.5em)
+------------------------------------------------------------------------ */
+
+@include media(">small") {
+  .hero {
+    height: 100vh;
+    background-image: url(../assets/home-hero-lg.png);
+  }
+}
+
+/* ---------------------------------------------------------------------
+ Breakpoint: Small (37.5em)
+------------------------------------------------------------------------ */
+
+@include media(">medium") {
+  .hero {
+    margin-top: -6.404375em;
+  }
+}
+
+/* ---------------------------------------------------------------------
+ Breakpoint: Large (70em)
+------------------------------------------------------------------------ */
+
+@include media(">large") {
+  .hero {
+    margin-top: -7.125em;
+  }
+}

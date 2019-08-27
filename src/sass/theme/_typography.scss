@@ -6,3 +6,11 @@ $opensans: "Open Sans", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 /* Stencile Font */
 $stencil: "Stardos Stencil", cursive;
+
+.hero-heading {
+  font-family: $stencil;
+  font-weight: 700;
+  font-size: 3.2rem;
+  color: $color-white;
+  text-transform: uppercase;
+}
