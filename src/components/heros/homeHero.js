@@ -6,7 +6,7 @@ import HeroArrows from './heroArrows'
 const HomeHero = () => (
   <div className="hero">
     <div className="hero__heading-wrapper">
-      <HeroHeading />
+      <HeroHeading title="the bicycle bar" />
     </div>
     <HeroArrows />
   </div>
