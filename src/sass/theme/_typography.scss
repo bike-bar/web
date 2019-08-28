@@ -42,7 +42,7 @@ $stencil: 'stencil_dregular', 'Stardos Stencil', cursive;
   letter-spacing: 3px;
   font-family: $stencil;
   font-size: 3rem;
-  color: $color-white;
+  color: rgba($color-white, 0.7);
   text-transform: uppercase;
 }
 
