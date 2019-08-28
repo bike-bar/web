@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
 @import url('https://fonts.googleapis.com/css?family=Stardos+Stencil&display=swap');
 
+/* ---------------------------------------------------------------------
+ Typography: Hosted Fonts
+------------------------------------------------------------------------ */
+
 @font-face {
   font-family: 'stencil_dregular';
   src: url('../assets/fonts/stencil_d_regular-webfont.woff2') format('woff2'),
@@ -11,20 +15,15 @@
   font-style: normal;
 }
 
+/* ---------------------------------------------------------------------
+ Typography: Defined Fonts
+------------------------------------------------------------------------ */
+
 /* Open Sans */
 $opensans: 'Open Sans', Helvetica, Arial, 'Lucida Grande', sans-serif;
 
 /* Stencile Font */
 $stencil: 'stencil_dregular', 'Stardos Stencil', cursive;
-
-.hero-heading {
-  letter-spacing: 3px;
-  font-family: $stencil;
-  font-weight: 700;
-  font-size: 3.2rem;
-  color: $color-white;
-  text-transform: uppercase;
-}
 
 /* ---------------------------------------------------------------------
  Typography: Defined Font Mixins
@@ -33,4 +32,26 @@ $stencil: 'stencil_dregular', 'Stardos Stencil', cursive;
 @mixin stencil_font($font: $stencil, $spacing: 2px) {
   letter-spacing: $spacing;
   font-family: $font;
+}
+
+/* ---------------------------------------------------------------------
+ Typography: Headings
+------------------------------------------------------------------------ */
+
+.hero-heading {
+  letter-spacing: 3px;
+  font-family: $stencil;
+  font-size: 3rem;
+  color: $color-white;
+  text-transform: uppercase;
+}
+
+/* ---------------------------------------------------------------------
+ Breakpoint: Small (37.5em)
+------------------------------------------------------------------------ */
+
+@include media('>small') {
+  .hero-heading {
+    font-size: 4.5rem;
+  }
 }

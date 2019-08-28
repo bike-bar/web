@@ -12,10 +12,11 @@ const IndexPage = () => {
   return (
     <Layout dropInHeader={dropInHeader}>
       <HomeHero />
-      <main ref={dropInHeader} style={{ height: '50em', background: '#414141', clear: 'both' }}>
-        <h1>Hi people</h1>
-        <p>Welcome to your new Gatsby site.</p>
-        <p>Now go build something great.</p>
+      <main
+        ref={dropInHeader}
+        style={{ height: '50em', background: '#414141', marginTop: '-.5em' }}
+      >
+        <div className="container__inner">hello</div>
       </main>
     </Layout>
   )

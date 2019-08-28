@@ -44,7 +44,7 @@ class Header extends Component {
     return (
       <header
         className={this.state.hasScrolled ? 'header-wrap sticky ' : 'header-wrap'}
-        style={changeHeaderStyle ? { position: 'sticky', backgroundColor: '#beafd8' } : null}
+        style={changeHeaderStyle ? { position: 'sticky', backgroundColor: '#8d7fa5' } : null}
       >
         <div className="container__inner">
           <div className={hasScrolled ? 'header header--no-border' : 'header'}>

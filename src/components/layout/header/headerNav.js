@@ -21,4 +21,3 @@ HeaderNav.propTypes = {
 }
 
 export default HeaderNav
-/* eslint-disable-next-line */

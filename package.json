@@ -8,6 +8,7 @@
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop",
+    "network": "gatsby develop -H 0.0.0.0",
     "fix:code": "eslint --fix 'src/**/*.{js,jsx}'",
     "fix:styles": "stylelint --fix 'src/**/*.{css,scss}'",
     "start": "yarn run develop",

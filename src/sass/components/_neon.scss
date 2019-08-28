@@ -10,7 +10,7 @@
   }
 
   &--1 {
-    animation: buzz 0.03s infinite alternate-reverse 1.25s;
+    animation: buzz 0.03s infinite alternate-reverse 1.5s;
   }
 
   &--2 {
@@ -20,6 +20,6 @@
   & span {
     @include stencil_font;
 
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }

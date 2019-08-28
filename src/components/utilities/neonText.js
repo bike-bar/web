@@ -23,7 +23,7 @@ class NeonText extends Component {
     this.setState({ show: true }, () => {
       this._timeout = setTimeout(() => {
         this.removeClass(this.props.delay)
-      }, 1500)
+      }, 3000)
     })
   }
 

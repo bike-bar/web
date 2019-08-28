@@ -52,7 +52,7 @@
     &,
     &::before,
     &::after {
-      width: 1.1em;
+      width: 2em;
       height: 2px;
       display: block;
       position: relative;
@@ -69,10 +69,12 @@
 
     &::before {
       top: -0.35em;
+      transform: translateY(-2px);
     }
 
     &::after {
       top: 0.25em;
+      transform: translateY(2px);
     }
   }
 
@@ -101,7 +103,7 @@
     top: 5.4em;
     left: 0;
     overflow: hidden;
-    background-color: $color-secondary-background;
+    background: $primary-gradient;
     transition: height 0.5s ease;
   }
 
@@ -128,20 +130,28 @@
 
   // TRANSITIONS THE MAIN NAV MENU
   &__checkbox:checked ~ &__menu {
-    height: 12em;
+    height: 13.5em;
     z-index: 333;
     border-bottom: 2px solid $color-primary;
   }
 }
 
 /* ---------------------------------------------------------------------
- Breakpoint: Large (51.25em)
+ Breakpoint: Medium (51.25em)
 ------------------------------------------------------------------------ */
 
 @include media('>medium') {
   .navigation {
     &__menu {
       top: 6.4em;
+    }
+
+    &__link {
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.15);
+      }
     }
   }
 }
@@ -158,7 +168,8 @@
 
   .header {
     padding: 1em 0 0;
-    border-bottom: 2px solid $color-primary;
+    border-bottom: 0.5em solid transparent;
+    border-image: url(../assets/chain.svg) 100 round;
 
     &--no-border {
       border: none;
@@ -175,7 +186,7 @@
       position: static;
       top: 4.95em;
       left: 0;
-      background-color: transparent;
+      background: transparent;
       overflow: visible;
       visibility: visible;
       align-items: baseline;
