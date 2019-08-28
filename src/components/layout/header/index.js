@@ -2,12 +2,8 @@ import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
-// import { Image } from '../../utilities'
 import HeaderNav from './headerNav'
 import { Beer } from '../../icons'
-
-// import logo1x from '../../../assets/header-logo.png'
-// import logo2x from '../../../assets/header-logo@2x.png'
 
 class Header extends Component {
   constructor(props) {
@@ -57,9 +53,7 @@ class Header extends Component {
         <div className="container__inner">
           <div className={hasScrolled ? 'header header--no-border' : 'header'}>
             <div className="header__logo">
-              {/* TODO: Update html to <picture></picture> once we get the logo */}
               <Link to="/">
-                {/* <Image imageArr={[logo1x, logo2x, 'Bike Bar logo']} /> */}
                 <Beer />
               </Link>
             </div>
