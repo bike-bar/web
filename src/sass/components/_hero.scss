@@ -60,7 +60,7 @@
  Breakpoint: Small (37.5em)
 ------------------------------------------------------------------------ */
 
-@include media(">small") {
+@include media('>small') {
   .hero {
     background-image: url(../assets/home-hero-lg.png);
     background-position-x: right;
@@ -71,7 +71,7 @@
  Breakpoint: Small (37.5em)
 ------------------------------------------------------------------------ */
 
-@include media(">medium") {
+@include media('>medium') {
   .hero {
     margin-top: -6.404375em;
 
@@ -85,7 +85,7 @@
  Breakpoint: Large (70em)
 ------------------------------------------------------------------------ */
 
-@include media(">large") {
+@include media('>large') {
   .hero {
     margin-top: -7.125em;
     background-position-x: center;
