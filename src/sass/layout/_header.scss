@@ -20,7 +20,7 @@
 
 .header-wrap.sticky {
   position: sticky;
-  background: $color-primary;
+  background: $secondary-gradient;
   animation: slide-down 420ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -103,8 +103,9 @@
     top: 5.25em;
     left: 0;
     overflow: hidden;
-    background: $primary-gradient;
+    background: $secondary-gradient;
     transition: height 0.5s ease;
+    opacity: 0.95;
   }
 
   &__list {
@@ -132,7 +133,6 @@
   &__checkbox:checked ~ &__menu {
     height: 13.5em;
     z-index: 333;
-    border-bottom: 2px solid $color-primary;
   }
 }
 

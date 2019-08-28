@@ -16,3 +16,5 @@ $container-max: 81em; //1200px + 6em for padding;
 
 /*** Gradient ***/
 $primary-gradient: linear-gradient(180deg, #4b4657 0%, #26272f 100%);
+$secondary-gradient: linear-gradient(to bottom right, darken($color-primary, 5%) 0%, #4b405f 100%);
+$tertiary-gradient: linear-gradient(-45deg, darken($color-primary, 5%) 0%, #4b405f 100%);
