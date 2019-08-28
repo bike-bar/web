@@ -1,11 +1,21 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
-@import url("https://fonts.googleapis.com/css?family=Stardos+Stencil&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Stardos+Stencil&display=swap');
+
+@font-face {
+  font-family: 'stencil_dregular';
+  src: url('../assets/fonts/stencil_d_regular-webfont.woff2') format('woff2'),
+    url('../assets/fonts/stencil_d_regular-webfont.woff') format('woff'),
+    url('../assets/fonts/stencil_d_regular-webfont.ttf') format('truetype'),
+    url('../assets/fonts/stencil_d_regular-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* Open Sans */
-$opensans: "Open Sans", Helvetica, Arial, "Lucida Grande", sans-serif;
+$opensans: 'Open Sans', Helvetica, Arial, 'Lucida Grande', sans-serif;
 
 /* Stencile Font */
-$stencil: "Stardos Stencil", cursive;
+$stencil: 'stencil_dregular', 'Stardos Stencil', cursive;
 
 .hero-heading {
   letter-spacing: 3px;
@@ -14,4 +24,13 @@ $stencil: "Stardos Stencil", cursive;
   font-size: 3.2rem;
   color: $color-white;
   text-transform: uppercase;
+}
+
+/* ---------------------------------------------------------------------
+ Typography: Defined Font Mixins
+------------------------------------------------------------------------ */
+
+@mixin stencil_font($font: $stencil, $spacing: 2px) {
+  letter-spacing: $spacing;
+  font-family: $font;
 }

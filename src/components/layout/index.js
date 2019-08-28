@@ -2,13 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import SEO from './seo'
+import Footer from './footer/index'
 import Header from './header'
 
 const Layout = ({ children, metaData, dropInHeader }) => (
   <>
     <Header dropInHeader={dropInHeader} />
     <SEO metaData={metaData} />
-    {children}
+    <main>{children}</main>
+    <Footer />
   </>
 )
 

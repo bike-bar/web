@@ -20,7 +20,7 @@
 
 .header-wrap.sticky {
   position: sticky;
-  background: $color-drop-header;
+  background: $color-primary;
   animation: slide-down 420ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -64,7 +64,7 @@
       position: relative;
       left: 0;
       transition: all 0.2s;
-      content: "";
+      content: '';
     }
 
     &::before {
@@ -117,7 +117,6 @@
     position: relative;
     text-decoration: none;
     cursor: pointer;
-    font-family: $stencil;
     background-color: transparent;
     border: none;
 
@@ -139,7 +138,7 @@
  Breakpoint: Large (51.25em)
 ------------------------------------------------------------------------ */
 
-@include media(">medium") {
+@include media('>medium') {
   .navigation {
     &__menu {
       top: 6.4em;
@@ -151,7 +150,7 @@
  Breakpoint: Large (70em)
 ------------------------------------------------------------------------ */
 
-@include media(">large") {
+@include media('>large') {
   .header-wrap {
     position: relative;
     background: transparent;
