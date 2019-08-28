@@ -33,6 +33,10 @@ const Footer = () => {
               <p>Friday and Saturday</p>
               <p>5pm-12am</p>
             </div>
+            <div className="footer__content-row">
+              <p>Sunday</p>
+              <p>Closed</p>
+            </div>
           </div>
           <div className="footer__content">
             <p className="footer__header">Contact</p>
