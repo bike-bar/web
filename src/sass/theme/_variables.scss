@@ -5,8 +5,7 @@ $color-dark-grey: #4f5e66;
 $color-med-grey: #d8d8d8;
 $color-light-grey: #d3d7d9;
 $color-primary-background: #414141;
-$color-secondary-background: lighten($color-primary-background, 10%);
-$color-primary: rgb(191, 176, 217);
+$color-primary: #8d7fa5;
 $color-drop-header: rgba($color-primary, 0.7);
 
 /*** Positions ***/
@@ -17,3 +16,5 @@ $container-max: 81em; //1200px + 6em for padding;
 
 /*** Gradient ***/
 $primary-gradient: linear-gradient(180deg, #4b4657 0%, #26272f 100%);
+$secondary-gradient: linear-gradient(to bottom right, darken($color-primary, 5%) 0%, #4b405f 100%);
+$tertiary-gradient: linear-gradient(-45deg, darken($color-primary, 5%) 0%, #4b405f 100%);

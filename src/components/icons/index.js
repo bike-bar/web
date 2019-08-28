@@ -1,1 +1,5 @@
 export { default as HandleBars } from './handleBars'
+export { default as Facebook } from './facebook'
+export { default as Instagram } from './instagram'
+export { default as Chain } from './chain'
+export { default as Beer } from './beer'

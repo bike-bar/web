@@ -1,0 +1,110 @@
+.hero {
+  width: 100%;
+  height: 40em;
+  margin-top: -5.5em;
+  position: relative;
+  background-image: url(../assets/home-hero-sm.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__heading-wrapper {
+    position: absolute;
+    width: 100%;
+    top: 15%;
+    animation: move-up 2s ease-in-out;
+
+    & h1 {
+      text-align: center;
+    }
+  }
+
+  &__arrows {
+    height: 7.8125em;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    &-wrapper {
+      position: absolute;
+      bottom: 40%;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: arrow 2.25s ease-in-out infinite;
+      animation-delay: -1s;
+
+      &--2 {
+        bottom: 20%;
+        animation-delay: -0.5s;
+      }
+
+      &--3 {
+        bottom: 0%;
+        animation-delay: 0s;
+      }
+    }
+  }
+}
+
+/* ---------------------------------------------------------------------
+ Breakpoint: Custom (25em)
+------------------------------------------------------------------------ */
+
+@media screen and (min-width: 25em) {
+  .hero {
+    height: 39em;
+  }
+}
+
+/* ---------------------------------------------------------------------
+ Breakpoint: Custom (31.25em)
+------------------------------------------------------------------------ */
+
+@media screen and (min-width: 31.25em) {
+  .hero {
+    height: 47em;
+  }
+}
+
+/* ---------------------------------------------------------------------
+ Breakpoint: Small (37.5em)
+------------------------------------------------------------------------ */
+
+@include media('>small') {
+  .hero {
+    height: 100vh;
+    background-image: url(../assets/home-hero-lg.png);
+    background-position-x: right;
+  }
+}
+
+/* ---------------------------------------------------------------------
+ Breakpoint: Medium (37.5em)
+------------------------------------------------------------------------ */
+
+@include media('>medium') {
+  .hero {
+    margin-top: -6.5em;
+
+    &__arrows {
+      height: 7.8125em;
+      position: absolute;
+      left: 50%;
+    }
+  }
+}
+
+/* ---------------------------------------------------------------------
+ Breakpoint: Large (70em)
+------------------------------------------------------------------------ */
+
+@include media('>large') {
+  .hero {
+    margin-top: -8em;
+    background-position-x: center;
+
+    &__heading-wrapper {
+      top: 30%;
+    }
+  }
+}

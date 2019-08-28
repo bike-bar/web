@@ -2,11 +2,8 @@ import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
-import { Image } from '../../utilities'
 import HeaderNav from './headerNav'
-
-import logo1x from '../../../assets/header-logo.png'
-import logo2x from '../../../assets/header-logo@2x.png'
+import { Beer } from '../../icons'
 
 class Header extends Component {
   constructor(props) {
@@ -44,14 +41,20 @@ class Header extends Component {
     return (
       <header
         className={this.state.hasScrolled ? 'header-wrap sticky ' : 'header-wrap'}
-        style={changeHeaderStyle ? { position: 'sticky', backgroundColor: '#beafd8' } : null}
+        style={
+          changeHeaderStyle
+            ? {
+                position: 'sticky',
+                background: 'linear-gradient(to bottom right, #80709a 0%, #4b405f 100%)'
+              }
+            : null
+        }
       >
         <div className="container__inner">
           <div className={hasScrolled ? 'header header--no-border' : 'header'}>
             <div className="header__logo">
-              {/* TODO: Update html to <picture></picture> once we get the logo */}
               <Link to="/">
-                <Image imageArr={[logo1x, logo2x, 'Bike Bar logo']} />
+                <Beer />
               </Link>
             </div>
 
