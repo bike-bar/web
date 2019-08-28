@@ -18,14 +18,14 @@
 
   &__arrow {
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
     animation: arrow 2s ease-in-out infinite;
     animation-delay: -1s;
 
     &--2 {
-      bottom: 5%;
+      bottom: 0;
       animation-delay: -0.5s;
     }
 
