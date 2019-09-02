@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "dev": "env-cmd -f .env.development gatsby develop",
+    "dev": "gatsby develop",
     "network": "gatsby develop -H 0.0.0.0",
     "fix:code": "eslint --fix 'src/**/*.{js,jsx}'",
     "fix:styles": "stylelint --fix 'src/**/*.{css,scss}'",
@@ -32,7 +32,6 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.2",
-    "env-cmd": "^9.0.3",
     "eslint": "^6.1.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.0.0",
