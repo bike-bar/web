@@ -13,7 +13,7 @@ const IndexPage = () => {
   return (
     <Layout dropInHeader={dropInHeader}>
       <HomeHero />
-      <main ref={dropInHeader} style={{ marginTop: '-.5em' }}>
+      <main ref={dropInHeader} className="landing">
         <div className="container__inner">
           <Instagram />
         </div>
