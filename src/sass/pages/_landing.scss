@@ -4,7 +4,17 @@
   background-image: url(../assets/bike-sm.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: -44em center;
+}
+
+/* ---------------------------------------------------------------------
+ Breakpoint: Small (37.5em)
+------------------------------------------------------------------------ */
+
+@include media('>small') {
+  .landing {
+    background-position: center;
+  }
 }
 
 /* ---------------------------------------------------------------------
