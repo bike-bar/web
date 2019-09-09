@@ -10,9 +10,20 @@ const IndexPage = () => {
   // setting a reference to the main content for drop in header
   const dropInHeader = React.createRef()
 
+  /* eslint-disable consistent-return */
+  const scrollToRef = () => {
+    if (dropInHeader && dropInHeader.current) {
+      return dropInHeader.current.scrollIntoView({
+        block: 'start',
+        behavior: 'smooth',
+        inline: 'start'
+      })
+    }
+  }
+
   return (
     <Layout dropInHeader={dropInHeader}>
-      <HomeHero />
+      <HomeHero scrollToRef={scrollToRef} />
       <main ref={dropInHeader} className="landing">
         <div className="container__inner">
           <Instagram />
