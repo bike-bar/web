@@ -2,7 +2,7 @@ import React from 'react'
 
 import Layout from '../components/layout'
 import HomeHero from '../components/heros/homeHero'
-import { Instagram } from '../components/utilities'
+import { Instagram, SectionHeading } from '../components/utilities'
 
 import '../sass/main.scss'
 
@@ -26,6 +26,9 @@ const IndexPage = () => {
       <HomeHero scrollToRef={scrollToRef} />
       <main ref={dropInHeader} className="landing">
         <div className="container__inner">
+          <section className="instagram">
+            <SectionHeading className="instagram__heading section-heading" text="our shanaganes" />
+          </section>
           <Instagram />
         </div>
       </main>
