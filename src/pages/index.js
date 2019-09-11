@@ -27,7 +27,7 @@ const IndexPage = () => {
       <main ref={dropInHeader} className="landing">
         <div className="container__inner">
           <section className="instagram">
-            <SectionHeading className="instagram__heading section-heading" text="our shanaganes" />
+            <SectionHeading className="instagram__heading section-heading" text="Our Shanaganes" />
           </section>
           <Instagram />
         </div>
