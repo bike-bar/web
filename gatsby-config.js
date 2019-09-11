@@ -2,9 +2,9 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`
 })
 
-console.log(`Using environment config: ${process.env.NODE_ENV}`)
-
 const titleData = require('./src/meta-data/titles.json')
+
+const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
@@ -31,6 +31,15 @@ module.exports = {
         instagram_id: process.env.INSTAGRAM_API_ID
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `assets`)
+      }
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-eslint',
     'gatsby-plugin-sass'
