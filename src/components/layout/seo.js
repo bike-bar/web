@@ -29,6 +29,7 @@ const SEO = ({ metaData }) => (
           ]}
         >
           <html lang="en" />
+          <script src="https://apps.elfsight.com/p/platform.js" defer />
         </Helmet>
       )
     }}
