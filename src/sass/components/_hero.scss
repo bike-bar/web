@@ -24,6 +24,8 @@
     position: absolute;
     bottom: 0;
     left: 50%;
+    background: transparent;
+    border: none;
 
     &-wrapper {
       position: absolute;
@@ -43,6 +45,16 @@
         animation-delay: 0s;
       }
     }
+  }
+}
+
+/* ---------------------------------------------------------------------
+ Breakpoint: (Retina2x)
+------------------------------------------------------------------------ */
+
+@include media('retina2x') {
+  .hero {
+    background-image: url(../assets/home-hero-sm@2x.png);
   }
 }
 
@@ -79,6 +91,16 @@
 }
 
 /* ---------------------------------------------------------------------
+ Breakpoint: (Small, Retina2x)
+------------------------------------------------------------------------ */
+
+@include media('>small', 'retina2x') {
+  .hero {
+    background-image: url(../assets/home-hero-lg@2x.png);
+  }
+}
+
+/* ---------------------------------------------------------------------
  Breakpoint: Medium (37.5em)
 ------------------------------------------------------------------------ */
 
@@ -100,7 +122,7 @@
 
 @include media('>large') {
   .hero {
-    margin-top: -8em;
+    margin-top: -6em;
     background-position-x: center;
 
     &__heading-wrapper {

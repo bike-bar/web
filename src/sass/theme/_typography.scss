@@ -46,6 +46,26 @@ $stencil: 'stencil_dregular', 'Stardos Stencil', cursive;
   text-transform: uppercase;
 }
 
+.section-heading {
+  position: relative;
+  font-size: 3.5rem;
+  font-family: $stencil;
+  text-transform: uppercase;
+  color: rgba($color-black, 0.65);
+
+  &::after {
+    height: 5px;
+    width: 3em;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    display: block;
+    background: $tertiary-gradient;
+    transform: translate(-50%);
+    content: '';
+  }
+}
+
 /* ---------------------------------------------------------------------
  Breakpoint: Small (37.5em)
 ------------------------------------------------------------------------ */
@@ -53,5 +73,19 @@ $stencil: 'stencil_dregular', 'Stardos Stencil', cursive;
 @include media('>small') {
   .hero-heading {
     font-size: 4.5rem;
+  }
+
+  .section-heading {
+    font-size: 4.5rem;
+  }
+}
+
+/* ---------------------------------------------------------------------
+ Breakpoint: Large (70em)
+------------------------------------------------------------------------ */
+
+@include media('>large') {
+  .hero-heading {
+    font-size: 6rem;
   }
 }

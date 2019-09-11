@@ -45,7 +45,7 @@ class Header extends Component {
           changeHeaderStyle
             ? {
                 position: 'sticky',
-                background: 'linear-gradient(to bottom right, #80709a 0%, #4b405f 100%)'
+                background: 'linear-gradient(270deg, #80709a 0%, #4b405f 100%)'
               }
             : null
         }

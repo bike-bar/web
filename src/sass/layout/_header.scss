@@ -164,6 +164,11 @@
   .header-wrap {
     position: relative;
     background: transparent;
+
+    & .container__inner {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 
   .header {
