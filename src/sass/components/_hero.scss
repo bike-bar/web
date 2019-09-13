@@ -1,6 +1,6 @@
 .hero {
   width: 100%;
-  height: 40em;
+  height: 100vh;
   margin-top: -5.5em;
   position: relative;
   // background-image: url(../assets/home-hero-sm.png);
@@ -20,18 +20,18 @@
   }
 
   &__arrows {
+    width: 100%;
     height: 7.8125em;
     position: absolute;
     bottom: 0;
-    left: 50%;
+    display: flex;
+    justify-content: center;
     background: transparent;
     border: none;
 
     &-wrapper {
       position: absolute;
       bottom: 40%;
-      left: 50%;
-      transform: translateX(-50%);
       animation: arrow 2.25s ease-in-out infinite;
       animation-delay: -1s;
 
@@ -62,21 +62,21 @@
  Breakpoint: Custom (25em)
 ------------------------------------------------------------------------ */
 
-@media screen and (min-width: 25em) {
-  .hero {
-    height: 39em;
-  }
-}
+// @media screen and (min-width: 25em) {
+//   .hero {
+//     height: 39em;
+//   }
+// }
 
 /* ---------------------------------------------------------------------
  Breakpoint: Custom (31.25em)
 ------------------------------------------------------------------------ */
 
-@media screen and (min-width: 31.25em) {
-  .hero {
-    height: 47em;
-  }
-}
+// @media screen and (min-width: 31.25em) {
+//   .hero {
+//     height: 47em;
+//   }
+// }
 
 /* ---------------------------------------------------------------------
  Breakpoint: Small (37.5em)
@@ -84,9 +84,9 @@
 
 @include media('>small') {
   .hero {
-    height: 100vh;
+    // height: 100vh;
     // background-image: url(../assets/home-hero-lg.png);
-    background-position-x: right;
+    // background-position-x: right;
   }
 }
 
@@ -110,8 +110,6 @@
 
     &__arrows {
       height: 7.8125em;
-      position: absolute;
-      left: 50%;
     }
   }
 }

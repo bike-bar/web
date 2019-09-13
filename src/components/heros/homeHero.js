@@ -11,29 +11,43 @@ const HomeHero = ({ scrollToRef }) => {
     <StaticQuery
       query={graphql`
         query {
-          file(relativePath: { eq: "home-hero-sm.png" }) {
+          mobileImage: file(relativePath: { eq: "home-hero-sm.png" }) {
             childImageSharp {
-              fluid(maxWidth: 800, quality: 100) {
+              fluid(maxWidth: 375, quality: 100) {
                 ...GatsbyImageSharpFluid
-                srcSet
+                srcSetWebp
+              }
+            }
+          }
+          desktopImage: file(relativePath: { eq: "home-hero-lg.png" }) {
+            childImageSharp {
+              fluid(maxWidth: 2000, quality: 100) {
+                ...GatsbyImageSharpFluid
+                srcSetWebp
               }
             }
           }
         }
       `}
-      render={data => (
-        <div className="hero">
-          <Image
-            fluid={data.file.childImageSharp.fluid}
-            objectFit="cover"
-            style={{ position: 'static' }}
-          />
-          <div className="hero__heading-wrapper">
-            <HeroHeading title="the bicycle bar" />
+      render={data => {
+        const sources = [
+          data.mobileImage.childImageSharp.fluid,
+          {
+            ...data.desktopImage.childImageSharp.fluid,
+            media: `(min-width: 600px)`
+          }
+        ]
+
+        return (
+          <div className="hero">
+            <Image fluid={sources} style={{ position: 'static' }} />
+            <div className="hero__heading-wrapper">
+              <HeroHeading title="the bicycle bar" />
+            </div>
+            <HeroArrows scrollToRef={scrollToRef} />
           </div>
-          <HeroArrows scrollToRef={scrollToRef} />
-        </div>
-      )}
+        )
+      }}
     />
   )
 }
