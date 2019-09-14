@@ -4,8 +4,6 @@ import Layout from '../components/layout'
 import HomeHero from '../components/heros/homeHero'
 import { Instagram, SectionHeading } from '../components/utilities'
 
-import '../sass/main.scss'
-
 const IndexPage = () => {
   // setting a reference to the main content for drop in header
   const dropInHeader = React.createRef()

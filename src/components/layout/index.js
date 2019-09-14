@@ -5,6 +5,8 @@ import SEO from './seo'
 import Footer from './footer/index'
 import Header from './header'
 
+import '../../sass/main.scss'
+
 const Layout = ({ children, metaData, dropInHeader }) => (
   <div className="layout">
     <Header dropInHeader={dropInHeader} />
