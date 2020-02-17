@@ -26,7 +26,7 @@
     "prettier/prettier": [
       2,
       {
-        "endOfLine": "lf",
+        "endOfLine": "auto",
         "tabWidth": 2,
         "arrowParens": "avoid",
         "printWidth": 100,
