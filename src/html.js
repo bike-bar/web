@@ -20,7 +20,7 @@ export default function HTML(props) {
         <div key="body" id="___gatsby" dangerouslySetInnerHTML={{ __html: props.body }} />
         {props.postBodyComponents}
         <div id="fb-root" />
-        {/* <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script> */}
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
       </body>
     </html>
   )

@@ -30,15 +30,6 @@ const SEO = ({ metaData }) => (
         >
           <html lang="en" />
           <script src="https://apps.elfsight.com/p/platform.js" defer />
-
-          {/* breaking changes below, re-visit */}
-          <div id="fb-root" />
-          <script
-            async
-            defer
-            crossOrigin="anonymous"
-            src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"
-          />
         </Helmet>
       )
     }}
