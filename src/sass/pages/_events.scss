@@ -1,0 +1,56 @@
+.events {
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/bike-sm.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -44em center;
+}
+
+.facebook {
+  padding: 3em 0;
+
+  &__heading {
+    text-align: center;
+  }
+}
+
+/* ---------------------------------------------------------------------
+ Breakpoint: Small (37.5em)
+------------------------------------------------------------------------ */
+
+@include media('>small') {
+  .events {
+    background-position: center;
+  }
+}
+
+/* ---------------------------------------------------------------------
+ Breakpoint: (Retina2x)
+------------------------------------------------------------------------ */
+
+@include media('retina2x') {
+  .events {
+    background-image: url(../assets/bike-sm@2x.png);
+  }
+}
+
+/* ---------------------------------------------------------------------
+ Breakpoint: Large (70em)
+------------------------------------------------------------------------ */
+
+@include media('>large') {
+  .events {
+    background-image: url(../assets/bike.png);
+  }
+}
+
+/* ---------------------------------------------------------------------
+ Breakpoint: (Large, Retina2x)
+------------------------------------------------------------------------ */
+
+@include media('>large', 'retina2x') {
+  .events {
+    background-image: url(../assets/bike@2x.png);
+  }
+}

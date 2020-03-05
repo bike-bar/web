@@ -24,14 +24,6 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-source-instagram',
-      options: {
-        username: 'thebicyclebar',
-        access_token: process.env.INSTAGRAM_API_ACCESS_TOKEN,
-        instagram_id: process.env.INSTAGRAM_API_ID
-      }
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,

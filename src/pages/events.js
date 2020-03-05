@@ -2,9 +2,9 @@ import React from 'react'
 
 import Layout from '../components/layout'
 import HomeHero from '../components/heros/homeHero'
-import { Instagram, SectionHeading } from '../components/utilities'
+import { FacebookEvents, SectionHeading } from '../components/utilities'
 
-const IndexPage = () => {
+const EventsPage = () => {
   // setting a reference to the main content for drop in header
   const dropInHeader = React.createRef()
 
@@ -18,20 +18,19 @@ const IndexPage = () => {
       })
     }
   }
-
   return (
     <Layout dropInHeader={dropInHeader}>
       <HomeHero scrollToRef={scrollToRef} />
-      <main ref={dropInHeader} className="landing">
+      <main ref={dropInHeader} className="events">
         <div className="container__inner">
-          <section className="instagram">
-            <SectionHeading className="instagram__heading section-heading" text="Our Shenanigans" />
+          <section className="facebook">
+            <SectionHeading className="facebook__heading section-heading" text="Events" />
           </section>
-          <Instagram />
+          <FacebookEvents />
         </div>
       </main>
     </Layout>
   )
 }
 
-export default IndexPage
+export default EventsPage
