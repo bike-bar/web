@@ -9,8 +9,8 @@
     "build": "gatsby build",
     "dev": "gatsby develop",
     "network": "gatsby develop -H 0.0.0.0",
-    "fix:code": "eslint --fix src/**/*.{js,jsx}",
-    "fix:styles": "stylelint --fix src/**/*.{css,scss}",
+    "fix:code": "eslint --fix \"src/**/*.{js,jsx}\"",
+    "fix:styles": "stylelint --fix \"src/**/*.{css,scss}\"",
     "start": "yarn run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests!\"",
@@ -31,6 +31,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-facebook": "^8.1.4",
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
